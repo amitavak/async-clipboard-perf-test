@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="clipboard-icon.svg" />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Async Clipboard POC</title>
+    <!-- import the webpage's javascript file -->
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <!-- this is the start of content -->
+    <!-- Create two button "Copy and "Paste" -->
+    <div>
+      <p>
+        <span class="main-title"
+          >Use keyboard shortcut or button click to use AsyncClipboard API</span
+        >
+        <br />
+        <span class="instruction-text">Copy:</span> Ctrl + C <br />
+        <span class="instruction-text">Paste:</span> Ctrl + V
+      </p>
+    </div>
+    <div class="button-container">
+      <button id="copy-btn" class="btn">Copy</button>
+      <button id="paste-btn" class="btn">Paste</button>
+      <button id="clear-btn" class="btn">Clear</button>
+    </div>
+    <div class="log-container">
+      <span class="log-label">Log Output</span>
+      <br />
+      <textarea
+        disabled
+        id="log-output"
+        class="log-output"
+        placeholder="Log output will be displayed here"
+      ></textarea>
+    </div>
+    <div id="clipboard-formats-container" class="clipboard-formats-container">
+      <span class="clipboard-formats-label"
+        >Clipboard Formats (will populate on paste)</span
+      >
+      <table id="clipboard-formats" class="clipboard-formats-table">
+        <tr class="clipboard-formats-header">
+          <th class="clipboard-format-type-header">Clipboard Format</th>
+          <th>Payload</th>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
